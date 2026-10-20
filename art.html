@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="css/styles.css">
+        <script src="js/mouse.js" defer></script>
+        <script src="js/parallax.js" defer></script>
+        <script src="js/art.js" defer></script>
+        
+        <style>
+            body {
+                margin: 0;
+                padding: 0;
+                max-width: 100%;
+                max-height: 100%;
+                height: 2000px;
+                overflow-x: hidden;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="parallax-container">
+        <div class="parallax-bg artpage" id="parallaxImage"></div>
+        <div class="parallax-content">
+            <div class="custom-cursor"></div>
+            
+        
+            <div style="margin-left:25px; display: flex;">
+                <div class="navigation-layer is-visible" category="Root">
+                    <button class="btn_layer" onclick="move_to_layer('Root', this)"><h1>Art</h1></button>
+                </div>
+                <div class="navigation-layer" category="Rain World">
+                    <div><h1>&nbsp;>&nbsp;</h1></div>
+                    <button class="btn_layer" onclick="move_to_layer('Rain World', this)"><h1>Rain World</h1></button>
+                </div>
+                <div class="navigation-layer" category="PinkLizard">
+                    <div><h1>&nbsp;>&nbsp;</h1></div>
+                    <button class="btn_layer" onclick="move_to_layer('PinkLizard', this)"><h1>Pink Lizard</h1></button>
+                </div>
+                <div class="navigation-layer" category="Commissions">
+                    <div><h1>&nbsp;>&nbsp;</h1></div>
+                    <button class="btn_layer" onclick="move_to_layer('Commissions', this)"><h1>Commissions</h1></button>
+                </div>
+                <div class="navigation-layer" category="Other Stuff">
+                    <div><h1>&nbsp;>&nbsp;</h1></div>
+                    <button class="btn_layer" onclick="move_to_layer('Other Stuff', this)"><h1>Other Stuff</h1></button>
+                </div>
+                <div class="navigation-layer" category="">
+                    <div><h1>&nbsp;>&nbsp;</h1></div>
+                    <button class="btn_layer"><h1>Art</h1></button>
+                </div>
+                <div class="navigation-layer">
+                    <div><h1>&nbsp;>&nbsp;</h1></div>
+                    <button class="btn_layer"><h1>Art</h1></button>
+                </div>
+                
+                
+            </div>
+            
+            
+            <div style="padding-top:5%"></div>
+
+            <div class="card-container" category="Root" >
+                <div class="card-obj-smaller rw" style="--delay: 0s" category="Root" onclick="move_to_layer('Rain World', this)">
+                    <div class="Gradient otherprojects">Rain World</div>
+                </div>
+                <div class="card-obj-smaller comms" style="--delay: 0.1s" category="Root" onclick="move_to_layer('Commissions', this)">
+                    <div class="Gradient otherprojects">Commissions</div>
+                </div>
+                <div class="card-obj-smaller otherstuff" style="--delay: 0.2s" category="Root" onclick="move_to_layer('Other Stuff', this)">
+                    <div class="Gradient otherprojects">Other Stuff</div>
+                </div>
+            </div>
+
+            <div class="card-container" category="Rain World">
+                <div class="card-obj-smaller pinkliz is-hidden" style="--delay: 0s" category="Rain World" onclick="move_to_layer('PinkLizard', this)">
+                    <div class="Gradient otherprojects">Pink Lizard / PLKAI</div>
+                </div>
+                <div class="card-obj-smaller otherrw is-hidden" style="--delay: 0.1s" category="Rain World">
+                    <div class="Gradient otherprojects">Other RW Art</div>
+                </div>
+            </div>
+            
+            <div class="collage-container">
+                <div class="card-container" category="PinkLizard">
+                    <div class="art-obj is-hidden" category="PinkLizard" style="width: 48%; height:auto">
+                        <img  src="images/art-page/RainWorld/PinkLizard/wetworkscaffolds.png"></img>
+                    </div>
+                    <div class="art-obj is-hidden" category="PinkLizard" style="width: 48%; height:auto">
+                        <img src="images/art-page/RainWorld/PinkLizard/sunkenpier.png"></img>
+                    </div>
+                </div>
+                <div class="card-container" category="PinkLizard">
+                    <div class="art-obj is-hidden" category="PinkLizard" style="width:48%; height:auto">
+                        <img src="images/art-page/RainWorld/PinkLizard/scugtree.png"></img>
+                    </div>
+                    <div class="art-obj is-hidden" category="PinkLizard" style="width:48%; height:auto">
+                        <img src="images/art-page/RainWorld/PinkLizard/hugheart.png"></img>
+                    </div>
+                   
+                </div>
+                <div class="card-container" category="PinkLizard">
+                     <div class="art-obj is-hidden" category="PinkLizard" style="width:48%; height:auto">
+                        <img src="images/art-page/RainWorld/PinkLizard/domination.png"></img>
+                    </div>
+                    <div class="art-obj is-hidden" category="PinkLizard" style="width:48%; height:auto">
+                        <img src="images/art-page/RainWorld/PinkLizard/disturb.gif"></img>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card-container" category="Commissions">
+                <div class="art-obj is-hidden" category="Commissions" style="width:auto;">
+                    <img style="width: 400px;height: 100%;" src=""></img>
+                </div>
+            </div>
+
+            <div class="card-container" category="Other Stuff">
+                <div class="art-obj is-hidden" category="Other Stuff" style="width:auto;">
+                    <img style="width: 400px;height: 100%;" src=""></img>
+                </div>
+            </div>
+            
+            <nav id="navlinksobj">
+                <div class="wave-wrapper is-visible" id ="wave-wrapper"></div>
+
+                <div class="nav-link-container is-visible" id="nav-link-container">
+                    <ul class="nav-links">
+                        <li><a href="index.html">Introduction</a></li>
+                        <li><a href="art.html">Art</a></li>
+                        <li><a href="music.html">Music</a></li>
+                        <li><a href="games.html">Games</a></li>
+                        <li><a href="projects.html">Other Projects</a></li>
+                        <li><a href="personal.html">Personal</a></li>
+                        <li><a href="contact.html">Contact Me!</a></li>
+                    </ul>
+                </div>
+            </nav>
+
+        </div>
+    </div>
+    </body>
+</html>

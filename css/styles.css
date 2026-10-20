@@ -1,0 +1,408 @@
+@import url('https://fonts.googleapis.com/css2?family=Iosevka+Charon:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
+a {
+  font-family: "Iosevka Charon", monospace;
+  font-weight: 700;
+  font-style: normal;
+}
+*, body {
+    cursor:none !important;
+}
+a, a:link, a:visited, a:hover, a:active {
+  color: inherit;
+  text-decoration: none;
+}
+button {
+    all:unset;
+}
+
+
+button.btn_layer h1{
+    display: inline-block; 
+    transition: transform 0.1s ease; 
+}
+button.btn_layer h1:hover {
+    transform: translateY(-3px) rotate(2deg);
+}
+button.btn_layer h1::after {
+  content: '';
+  position: absolute;
+  width: 0%;
+  height: 3px;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: white;
+  transition: width 0.1s ease-in-out;
+}
+button.btn_layer h1:hover::after {
+  width: 100%;
+}
+
+
+
+.custom-cursor {
+  width: 0px;
+  height: 0px;
+  background-image: url('../images/general/cursor.png');
+  background-size: cover;
+  position: fixed;
+  pointer-events: none; 
+  z-index: 9999;
+}
+.custom-cursor.is-hovering {
+    background-image: url('../images/general/pointer.png');
+}
+.img-banner-container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    object-fit: contain;
+    margin-top: 290px;
+    opacity: 0;
+    animation: fadeIn 0.85s ease-out forwards;
+}
+.navigation-layer {
+    display: flex;
+    opacity: 0;
+    font-size: 0;
+    visibility: hidden;
+}
+.navigation-layer.is-visible {
+    width: auto;
+    font-size: 18px;
+    opacity:1;
+    visibility: visible;
+}
+
+
+#surprisetext {
+    opacity: 0;
+    transform: translateY(60px);
+    visibility: hidden;
+    transition: 
+        opacity 0.6s cubic-bezier(0.25, 1, 0.5, 1), 
+        transform 0.6s cubic-bezier(0.25, 1, 0.5, 1), 
+        visibility 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+    will-change: opacity, visibility;
+}
+#surprisetext.is-visible {
+    opacity: 1;
+    transform: none;
+    visibility: visible;
+}
+#content1 {
+    opacity: 0;
+    transform: translateY(60px);
+    visibility: hidden;
+    transition: 
+        opacity 0.6s cubic-bezier(0.25, 1, 0.5, 1), 
+        transform 0.6s cubic-bezier(0.25, 1, 0.5, 1), 
+        visibility 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+    will-change: opacity, visibility;
+}
+#content1.is-visible {
+    margin-left: 15px;
+    margin-right: 15px;
+    text-align: center;
+    opacity: 1;
+    transform: none;
+    visibility: visible;
+}
+.card-section {
+    display: flex;
+    flex-direction: column;
+    gap:16px;
+}
+
+.card-container {
+    display: flex;
+    justify-content: center;
+    gap:16px;
+    align-items: flex-end; 
+}
+.card-obj {
+    width: 200px; height:200px;
+    border-style: solid;
+    border-color: white;
+    border-radius: 22px;
+    background-color: black;
+    font-weight: 700;
+    font-family: "Iosevka Charon";
+    font-size: 35px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    text-align: center;
+    object-fit: cover;
+    flex: 0 0 auto;
+    transition: 
+        transform 0.4s cubic-bezier(0.25, 1, 0.5, 1),
+        border-width 0.4s cubic-bezier(0.25, 1, 0.5, 1),
+        border-radius 0.4s cubic-bezier(0.25, 1, 0.5, 1)
+}
+.card-obj-smaller {
+    width: 150px; height:150px;
+    border-style: solid;
+    border-color: white;
+    border-radius: 22px;
+    background-color: black;
+    font-weight: 700;
+    font-family: "Iosevka Charon";
+    font-size: 35px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    text-align: center;
+    object-fit: cover;
+    flex: 0 0 auto;
+    visibility: visible;
+    transform: scale(1);
+
+    transition: 
+        opacity 0.5s ease, visibility 0.5s ease,
+        transform 0.2s cubic-bezier(0.25, 1, 0.5, 1),
+        border-width 0.2s cubic-bezier(0.25, 1, 0.5, 1),
+        border-radius 0.2s cubic-bezier(0.25, 1, 0.5, 1)
+}
+.art-obj {
+    width: 250px; height: 250px;
+    border-style: solid;
+    border-color: white;
+    border-radius: 22px;
+    background-color: black;
+    font-weight: 700;
+    font-family: "Iosevka Charon";
+    font-size: 22px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    text-align: center;
+    overflow: hidden;    
+    visibility: visible;
+
+    transition: 
+        opacity 0.5s ease, visibility 0.5s ease,
+        transform 0.2s cubic-bezier(0.25, 1, 0.5, 1),
+        border-width 0.2s cubic-bezier(0.25, 1, 0.5, 1),
+        border-radius 0.2s cubic-bezier(0.25, 1, 0.5, 1)
+}
+.collage-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  width: 100%;
+  padding: 10px;
+  height: auto;
+  width: auto;
+  box-sizing: border-box;
+}
+.collage-container img {
+  flex: 1 1 300px;
+  height: 30vh; 
+  object-fit: contain;
+  border-radius: 4px;
+}
+.is-hidden {
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.25s ease, visibility 0s ease 0.25;
+    animation: fadeOut 0.25s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+}
+.card-obj.art{
+    background-image: url('../images/introduction/ArtIcon.png');
+}
+.card-obj.games{
+    background-image: url('../images/introduction/GamesIcon.png');
+}
+.card-obj.music{
+    background-image: url('../images/introduction/MusicIcon.png');
+}
+.card-obj.otherprojects{
+    background-image: url('../images/introduction/OtherProjectsIcon.png');
+}
+.card-obj.selfie{
+    background-image: url('../images/introduction/sleepy selfie small.png');
+}
+.card-obj:hover {
+    transform: scale(1.05) translateY(-12px) rotate(3deg);
+    border-width: 16px;
+    border-radius: 44px;
+}
+.card-obj-smaller:hover {
+    transform: scale(1.025) translateY(-12px)  rotate(-2deg);
+    border-radius: 25px;
+    border-width: 12px;
+}
+.card-obj-smaller.rw {
+    font-size: 26px;
+    background-image: url('../images/art-page/RainWorldIcon.png');
+    object-fit:fill;
+}
+.card-obj-smaller.comms {
+    font-size: 26px;
+    background-image: url('../images/art-page/commissionsicon.png');
+    object-fit:fill;
+}
+.card-obj-smaller.otherstuff {
+    font-size: 26px;
+    background-image: url('../images/art-page/skrunklebip.png');
+    object-fit:fill;
+}
+.card-obj-smaller.pinkliz {
+    font-size: 26px;
+    background-image: url('../images/art-page/PinkLizardIcon.png');
+    object-fit:fill;
+}
+.Gradient {
+    width: 100%;
+    border-radius: inherit;
+}
+.Gradient.art{
+    background-image: linear-gradient(#00ffd500,#219784);
+}
+.Gradient.games{
+    background-image: linear-gradient(#00ffd500,#ffcb5a);
+}
+.Gradient.music{
+    background-image: linear-gradient(#00ffd500,#972174);
+}
+.Gradient.otherprojects{
+    background-image: linear-gradient(#00ffd500,#000000);
+}
+
+.wavy-banner {
+    position: relative;
+    width: 100%;
+    height: 120px; 
+    background: #1E1E1E; 
+}
+.wave-wrapper {
+    position: fixed;
+    bottom: -55px;
+    left: 0;
+    width: 200%;
+    height: 50px;
+    background-image: url('../images/introduction/upside_down_banner.png');
+    background-repeat: repeat-x;
+    background-size: 50% 100%;
+    animation: move-wave 10s linear infinite;
+    transition: bottom 0.4s ease;
+
+}
+.wave-wrapper.is-visible {
+    bottom: 25px;
+}
+#dgaf, #card-section {
+    opacity: 0;
+    transform: translateY(60px);
+    visibility: hidden;
+    transition: 
+        opacity 0.6s cubic-bezier(0.25, 1, 0.5, 1), 
+        transform 0.6s cubic-bezier(0.25, 1, 0.5, 1), 
+        visibility 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+    will-change: opacity, visibility;
+}
+#dgaf.is-visible, #card-section.is-visible {
+    opacity: 1;
+    transform: none;
+    visibility: visible;
+}
+
+.nav-link-container {
+    background-color: #1e1e1e;
+    position: fixed; bottom: -70px; left: 0; width: 100%;
+    transition: bottom 0.4s ease;
+}
+.nav-link-container.is-visible {
+    bottom: 0px;
+}
+.nav-links {
+    display: flex;
+    text-decoration: none;
+    flex-direction: row;
+    list-style-type: none;
+    gap: 40px;
+    font-weight: 1400;
+    transition: transform 0.3s ease; 
+    color: white;
+    font-size: 18px;
+} 
+.nav-links a {
+    display: inline-block; 
+    transition: transform 0.15s ease; 
+}
+.nav-links a:hover {
+    transform: translateY(-3px) rotate(2deg);
+}
+.nav-links a::after {
+  content: '';
+  position: absolute;
+  width: 0%;
+  height: 3px;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: white;
+  transition: width 0.3s ease-in-out;
+}
+.nav-links a:hover::after {
+  width: 100%;
+}
+.parallax-container {
+    z-index: -1;
+    width: 100%;
+    height: 600px;
+}
+.parallax-body {
+    padding: 0;
+    margin: 0;
+}
+.parallax-bg {
+    position: absolute;
+    z-index: index inherit;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 180%;
+    background-image: url('../images/general/howlingturnpikeblur.png');
+    background-size: cover;
+    background-position: center;
+    will-change: transform;
+}
+.parallax-bg.artpage {
+    background-image: url('../images/art-page/bg.png');
+}
+.parallax-content {
+    position: relative;
+    z-index: 2;
+    justify-content: center;
+    color: white;
+}
+h1, h2, h3, h4, h5, h6 {font-family: "Iosevka Charon", monospace;}
+h1 {font-weight: 700;}
+h2 {font-weight: 500;}
+h3 {font-weight: 400;}
+h4 {font-weight: 400;}
+h5 {font-weight: 300;}
+h6 {font-weight: 300;}
+
+@keyframes move-wave {
+0% {
+    transform: translateX(0);
+}
+100% {
+    transform: translateX(-50%); 
+}
+}
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+@keyframes fadeOut {
+  to {
+    height:0;
+  }
+}
