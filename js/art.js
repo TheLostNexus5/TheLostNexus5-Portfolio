@@ -1,7 +1,12 @@
 const cards = document.querySelectorAll('.card-obj-smaller')
 const artobjs = document.querySelectorAll('.art-obj')
+const artimgs = document.querySelectorAll('.art-obj img')
 const card_containers = document.querySelectorAll('.card-container')
 const navigation_layers = document.querySelectorAll('.navigation-layer')
+const art_obs = document.querySelector('.art-observation-container')
+const art_image = document.querySelector('.art-showcase-image')
+const art_scrollcontainer = document.querySelector('.art-observation-scrollcontainer')
+const art_name = document.getElementById("art-name")
 
 let path = ["Root"]
 
@@ -45,3 +50,15 @@ function truncateAfter(arr, target, index = 0) {
   if (arr[index] === target) return [arr[index]]; 
   return [arr[index], ...truncateAfter(arr, target, index + 1)];
 }
+
+artimgs.forEach(artobj => {
+    artobj.addEventListener('click', function(event) {
+        art_obs.classList.add('show-art')
+        art_image.setAttribute('src', artobj.getAttribute('src'))
+        art_name.textContent = artobj.getAttribute('art-name')
+        art_scrollcontainer.scrollTo(0, 0);
+    });
+});
+art_obs.addEventListener('click', function(event) {
+    art_obs.classList.remove('show-art')
+})
