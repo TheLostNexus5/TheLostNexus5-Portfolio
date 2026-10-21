@@ -29,7 +29,9 @@
                     <div style="width:100%; height:9px; background-color: white;"></div>
                     <div class="art-showcase-panel">
                         <img class="art-showcase-image">
+                        <video id="art-showcase-video" controls class="art-showcase-video hide-video">
                     </div>
+
                     <!--<h2 style="margin-left: 25px;" id="art-name">Art Name</h2>-->
                 </div>
             </div>
@@ -48,7 +50,7 @@
                 </div>
                 <div class="navigation-layer" category="OtherRw">
                     <div><h1>&nbsp;>&nbsp;</h1></div>
-                    <button class="btn_layer" onclick="move_to_layer('OtherRw', this)"><h1>Other RW Art</h1></button>
+                    <button class="btn_layer" onclick="move_to_layer('OtherRw', this)"><h1>RW Art</h1></button>
                 </div>
                 <div class="navigation-layer" category="Commissions">
                     <div><h1>&nbsp;>&nbsp;</h1></div>
@@ -58,13 +60,13 @@
                     <div><h1>&nbsp;>&nbsp;</h1></div>
                     <button class="btn_layer" onclick="move_to_layer('Other Stuff', this)"><h1>Other Stuff</h1></button>
                 </div>
-                <div class="navigation-layer" category="">
+                <div class="navigation-layer" category="artmonth2024">
                     <div><h1>&nbsp;>&nbsp;</h1></div>
-                    <button class="btn_layer"><h1>Art</h1></button>
+                    <button class="btn_layer" onclick="move_to_layer('artmonth2024', this)"><h1>RW Art Month 2024</h1></button>
                 </div>
-                <div class="navigation-layer">
+                <div class="navigation-layer" category="RWAnimations">
                     <div><h1>&nbsp;>&nbsp;</h1></div>
-                    <button class="btn_layer"><h1>Art</h1></button>
+                    <button class="btn_layer" onclick="move_to_layer('RWAnimations', this)"><h1>RW Animations</h1></button>
                 </div>
                 
                 
@@ -90,17 +92,23 @@
                     <div class="Gradient otherprojects">Pink Lizard / PLKAI</div>
                 </div>
                 <div class="card-obj-smaller otherrw is-hidden" style="--delay: 0.1s" category="Rain World" onclick="move_to_layer('OtherRw', this)">
-                    <div class="Gradient otherprojects">Other RW Art</div>
+                    <div class="Gradient otherprojects">RW Art</div>
                 </div>
             </div>
             
             <div class="card-container" category="PinkLizard">
                 <div class="collage-container">
                     <div class="art-obj is-hidden" category="PinkLizard">
+                        <video poster="images/art-page/RainWorld/PinkLizard/plmfpthumb.png" src="images/art-page/RainWorld/PinkLizard/pink lizard meets five pebbles.mp4" art-name="Pink Lizard Meets Five Pebbles"></video>
+                    </div>
+                    <div class="art-obj is-hidden" category="PinkLizard">
                         <img src="images/art-page/RainWorld/PinkLizard/pl_in_howling_turnpike.png" art-name="Pink Lizard in Howling Turnpike"></img>
                     </div>
                     <div class="art-obj is-hidden" category="PinkLizard">
                         <img  src="images/art-page/RainWorld/PinkLizard/wetworkscaffolds.png" art-name="Pink Lizard in Wetwork Scaffolds"></img>
+                    </div>
+                    <div class="art-obj is-hidden" category="PinkLizard">
+                        <img src="images/art-page/RainWorld/PinkLizard/pink lizard kills fjord lizard.png" art-name="Pink Lizard Kills a Fjord Lizard"></img>
                     </div>
                     <div class="art-obj is-hidden" category="PinkLizard">
                         <img src="images/art-page/RainWorld/PinkLizard/sunkenpier.png" art-name="Pink Lizard in Sunken Pier"></img>
@@ -168,24 +176,178 @@
                             <div class="Gradient otherprojects">RW Art Month 2024</div>
                         </div>
                     </div>
-                    
                     <div class="art-obj is-hidden" category="OtherRw">
-                        <img src="images/art-page/RainWorld/PinkLizard/pl_in_howling_turnpike.png" art-name="Pink Lizard in Howling Turnpike"></img>
+                        <img src="images/art-page/RainWorld/OtherRWArt/riv human.png" art-name="Human Riv"></img>
+                    </div>
+                    <div class="art-obj is-hidden" category="OtherRw">
+                        <video src="images/art-page/RainWorld/OtherRWArt/white liz apple.mp4" art-name="appil"></video>
+                    </div>
+                    <div class="art-obj is-hidden" category="OtherRw">
+                        <img src="images/art-page/RainWorld/OtherRWArt/slugkit.png" art-name="my first RW art!"></img>
                     </div>
                 </div>
                 <div class="collage-container">
+                    <div style="height: 158px;"></div>
                     <div class="art-obj is-hidden" category="OtherRw">
-                        <img src="images/art-page/RainWorld/PinkLizard/hugheart.png" art-name="heart hug!"></img>
+                        <img src="images/art-page/RainWorld/OtherRWArt/rot tuah.png" art-name="rot tuah"></img>
+                    </div>
+                    <div class="art-obj is-hidden" category="OtherRw">
+                        <img src="images/art-page/RainWorld/OtherRWArt/high effort shitpost 5.png" art-name="get a job"></img>
+                    </div>
+                    
+                </div>
+            </div>
+
+
+            <div class="card-container" category="artmonth2024">
+                <div class="collage-container">
+                    <div class="art-obj is-hidden" category="artmonth2024">
+                        <img src="images/art-page/RainWorld/OtherRWArt/RWArtMonth2024/Day 1 - Rivulet.png" art-name="Day 1 - Rivulet"></img>
+                    </div>
+                    <div class="art-obj is-hidden" category="artmonth2024">
+                        <img src="images/art-page/RainWorld/OtherRWArt/RWArtMonth2024/Day 3 - Chimney Canopy.png" art-name="Day 3 - Chimney Canopy"></img>
+                    </div>
+                    <div class="art-obj is-hidden" category="artmonth2024">
+                        <img src="images/art-page/RainWorld/OtherRWArt/RWArtMonth2024/Day 8 - Saint.png" art-name="Day 8 - Saint"></img>
+                    </div>
+                    <div class="art-obj is-hidden" category="artmonth2024">
+                        <img src="images/art-page/RainWorld/OtherRWArt/RWArtMonth2024/Day 10 - Worm Grass.png" art-name="Day 10 - Worm Grass"></img>
+                    </div>
+                    <div class="art-obj is-hidden" category="artmonth2024">
+                        <img src="images/art-page/RainWorld/OtherRWArt/RWArtMonth2024/Day 12 - Glow Weed.png" art-name="Day 12 - Glow Weed"></img>
+                    </div>
+                    <div class="art-obj is-hidden" category="artmonth2024">
+                        <img src="images/art-page/RainWorld/OtherRWArt/RWArtMonth2024/Day 14 - Leviathan.png" art-name="Day 14 - Leviathan"></img>
+                    </div>
+                    <div class="art-obj is-hidden" category="artmonth2024">
+                        <img src="images/art-page/RainWorld/OtherRWArt/RWArtMonth2024/Day 16 - Monk Achievement.png" art-name="Day 16 - Monk (Achievement)"></img>
+                    </div>
+                    <div class="art-obj is-hidden" category="artmonth2024">
+                        <video src="images/art-page/RainWorld/OtherRWArt/RWArtMonth2024/Day 17 - Bombs.mp4" art-name="Day 17 - Bombs"></video>
+                    </div>
+                    <div class="art-obj is-hidden" category="artmonth2024">
+                        <img src="images/art-page/RainWorld/OtherRWArt/RWArtMonth2024/Day 19 - Saint (Achievement).png" art-name="Day 19 - Saint (Achievement)"></img>
+                    </div>
+                    <div class="art-obj is-hidden" category="artmonth2024">
+                        <img src="images/art-page/RainWorld/OtherRWArt/RWArtMonth2024/Day 23 - Pearls.png" art-name="Day 23 - Pearls"></img>
+                    </div>
+                    <div class="art-obj is-hidden" category="artmonth2024">
+                        <img src="images/art-page/RainWorld/OtherRWArt/RWArtMonth2024/Day 24 - Granddaddy Long Legs.png" art-name="Day 24 - Granddaddy Long Legs"></img>
+                    </div>
+                    <div class="art-obj is-hidden" category="artmonth2024">
+                        <img src="images/art-page/RainWorld/OtherRWArt/RWArtMonth2024/Day 26 - Create Spears.png" art-name="Day 26 - Create Spears"></img>
+                    </div>
+                    <div class="art-obj is-hidden" category="artmonth2024">
+                        <img src="images/art-page/RainWorld/OtherRWArt/RWArtMonth2024/Day 30 - Overseers.png" art-name="Day 30 - Overseers"></img>
+                    </div>
+                    <div class="art-obj is-hidden" category="artmonth2024">
+                        <img src="images/art-page/RainWorld/OtherRWArt/RWArtMonth2024/Day 31 - Unfortunate Development.png" art-name="Day 31 - Unfortunate Development"></img>
+                    </div>
+                </div>
+                <div class="collage-container">
+                    <div class="art-obj is-hidden" category="artmonth2024">
+                        <img src="images/art-page/RainWorld/OtherRWArt/RWArtMonth2024/Day 2 - Submerged Superstructure.png" art-name="Day 2 - Submerged Superstructure"></img>
+                    </div>
+                    <div class="art-obj is-hidden" category="artmonth2024">
+                        <img src="images/art-page/RainWorld/OtherRWArt/RWArtMonth2024/Day 4-5 - Fire Egg and Spear.png" art-name="Day 4-5 - Fire Egg and Spear"></img>
+                    </div>
+                    <div class="art-obj is-hidden" category="artmonth2024">
+                        <img src="images/art-page/RainWorld/OtherRWArt/RWArtMonth2024/Day 6 - Taming.png" art-name="Day 6 - Taming"></img>
+                    </div>
+                    <div class="art-obj is-hidden" category="artmonth2024">
+                        <img src="images/art-page/RainWorld/OtherRWArt/RWArtMonth2024/Day 7 - Crafting.png" art-name="Day 7 - Crafting"></img>
+                    </div>
+                    <div class="art-obj is-hidden" category="artmonth2024">
+                        <img src="images/art-page/RainWorld/OtherRWArt/RWArtMonth2024/Day 9 - Filtration System.png" art-name="Day 9 - Filtration System"></img>
+                    </div>
+                    <div class="art-obj is-hidden" category="artmonth2024">
+                        <img src="images/art-page/RainWorld/OtherRWArt/RWArtMonth2024/Day 11 - Lantern.png" art-name="Day 11 - Lantern"></img>
+                    </div>
+                    <div class="art-obj is-hidden" category="artmonth2024">
+                        <img src="images/art-page/RainWorld/OtherRWArt/RWArtMonth2024/Day 13 - Five Pebbles.png" art-name="Day 13 - Five Pebbles"></img>
+                    </div>
+                    <div class="art-obj is-hidden" category="artmonth2024">
+                        <img src="images/art-page/RainWorld/OtherRWArt/RWArtMonth2024/Day 15 - Spiders.png" art-name="Day 15 - Spiders"></img>
+                    </div>
+                    <div class="art-obj is-hidden" category="artmonth2024">
+                        <img src="images/art-page/RainWorld/OtherRWArt/RWArtMonth2024/Day 18 - Monster Kelp.png" art-name="Day 18 - Monster Kelp"></img>
+                    </div>
+                    <div class="art-obj is-hidden" category="artmonth2024">
+                        <img src="images/art-page/RainWorld/OtherRWArt/RWArtMonth2024/Day 20 - Beehives.png" art-name="Day 20 - Beehives"></img>
+                    </div>
+                    <div class="art-obj is-hidden" category="artmonth2024">
+                        <img src="images/art-page/RainWorld/OtherRWArt/RWArtMonth2024/Day 21-22 - Spears and Lantern Mice.png" art-name="Day 21-22 - Spears and Lantern Mice"></img>
+                    </div>
+                    <div class="art-obj is-hidden" category="artmonth2024">
+                        <img src="images/art-page/RainWorld/OtherRWArt/RWArtMonth2024/Day 25 - Karma Three.png" art-name="Day 25 - Karma Three"></img>
+                    </div>
+                    <div class="art-obj is-hidden" category="artmonth2024">
+                        <img src="images/art-page/RainWorld/OtherRWArt/RWArtMonth2024/Day 27-28 - RW 7 Year Anniversary Backflips.png" art-name="Day 27-28 - RW 7 Year Anniversary Backflips"></img>
+                    </div>
+                    <div class="art-obj is-hidden" category="artmonth2024">
+                        <img src="images/art-page/RainWorld/OtherRWArt/RWArtMonth2024/Day 29 - Nightcat.png" art-name="Day 29 - Nightcat"></img>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card-container" category="RWAnimations">
+                <div class="collage-container">
+                    <div class="art-obj is-hidden" category="RWAnimations">
+                        <video src="images/art-page/RainWorld/OtherRWArt/Animations/monster-no-ending.mp4" art-name="MONSTER - Rain World Animatic (i cut the ending part lol)"></video>
+                    </div>
+                    <div class="art-obj is-hidden" category="RWAnimations">
+                        <video src="images/art-page/RainWorld/OtherRWArt/Animations/artificer_gas_final.mp4" art-name="scavenger got that gas money?"></video>
+                    </div>
+                    <div class="art-obj is-hidden" category="RWAnimations">
+                        <video src="images/art-page/RainWorld/OtherRWArt/Animations/ice_on_ground.mp4" art-name="ice on ground"></video>
+                    </div>
+                </div>
+                <div class="collage-container">
+                    <div class="art-obj is-hidden" category="RWAnimations">
+                        <video src="images/art-page/RainWorld/OtherRWArt/Animations/survivor_push_final.mp4" art-name="monk pushes survivor"></video>
+                    </div>
+                    <div class="art-obj is-hidden" category="RWAnimations">
+                        <video src="images/art-page/RainWorld/OtherRWArt/Animations/enot_hail_final.mp4" art-name="it's protecting enot from the rain"></video>
+                    </div>
+                    <div class="art-obj is-hidden" category="RWAnimations">
+                        <video src="images/art-page/RainWorld/OtherRWArt/Animations/gimme ur money.mp4" art-name="gimme ur money"></video>
+                    </div>
+                    <div class="art-obj is-hidden" category="RWAnimations">
+                        <video src="images/art-page/RainWorld/OtherRWArt/Animations/ruffles.mp4" art-name="ruffles"></video>
                     </div>
                 </div>
             </div>
 
             <div class="card-container" category="Commissions">
-                <div class="art-obj is-hidden" category="Commissions" style="width:auto;">
-                    <img style="width: 400px;height: 100%;" src=""></img>
+                <div class="collage-container">
+                    <div class="art-obj is-hidden" category="Commissions">
+                        <img src="images/art-page/Commissions/comm for sheer cold.png" art-name="Commission for Sheer Cold"></img>
+                    </div>
+                    <div class="art-obj is-hidden" category="Commissions">
+                        <img src="images/art-page/Commissions/comm for luckyz.png" art-name="Commission for Luckyz"></img>
+                    </div>
+                    <div class="art-obj is-hidden" category="Commissions">
+                        <img src="images/art-page/Commissions/comm for firefly birthday.png" art-name="Commission for Firefly (3)"></img>
+                    </div>
+                    <div class="art-obj is-hidden" category="Commissions">
+                        <img src="images/art-page/Commissions/comm for fork updated.png" art-name="Commission for fork (1)"></img>
+                    </div>
+                </div>
+                <div class="collage-container">
+                    <div class="art-obj is-hidden" category="Commissions">
+                        <img src="images/art-page/Commissions/comm for kalocthecrocodile.png" art-name="Commission for KaloctheCrocodile"></img>
+                    </div>
+                    <div class="art-obj is-hidden" category="Commissions">
+                        <img src="images/art-page/Commissions/comm for orange lizard.png" art-name="Commission for Firefly (1)"></img>
+                    </div>
+                    <div class="art-obj is-hidden" category="Commissions">
+                        <img src="images/art-page/Commissions/comm for orange lizard again.png" art-name="Commission for Firefly (2)"></img>
+                    </div>
+                    <div class="art-obj is-hidden" category="Commissions">
+                        <img src="images/art-page/Commissions/comm for fork again.png" art-name="Commission for fork (2)"></img>
+                    </div>
                 </div>
             </div>
-
             <div class="card-container" category="Other Stuff">
                 <div class="art-obj is-hidden" category="Other Stuff" style="width:auto;">
                     <img style="width: 400px;height: 100%;" src=""></img>
